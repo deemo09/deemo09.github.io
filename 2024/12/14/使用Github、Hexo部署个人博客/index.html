@@ -25,7 +25,7 @@
         
     
     <!-- title -->
-    <title>Hexo</title>
+    <title>使用Github、Hexo部署个人博客</title>
     <!-- styles -->
     
 <link rel="stylesheet" href="/css/style.css">
@@ -88,14 +88,14 @@
     <div id="share" style="display: none">
       <ul>
     <li><a class="icon"
-           target="_blank" rel="noopener" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/12/14/%E9%83%A8%E7%BD%B2Github%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&title="><i
+           target="_blank" rel="noopener" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/12/14/%E4%BD%BF%E7%94%A8Github%E3%80%81Hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&title=使用Github、Hexo部署个人博客"><i
                     class="fab fa-qq " aria-hidden="true"></i></a></li>
     <li><a class="icon"
-           target="_blank" rel="noopener" href="https://service.weibo.com/share/share.php?url=http://example.com/2024/12/14/%E9%83%A8%E7%BD%B2Github%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&title="><i
+           target="_blank" rel="noopener" href="https://service.weibo.com/share/share.php?url=http://example.com/2024/12/14/%E4%BD%BF%E7%94%A8Github%E3%80%81Hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&title=使用Github、Hexo部署个人博客"><i
                     class="fab fa-weibo " aria-hidden="true"></i></a></li>
-    <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2024/12/14/%E9%83%A8%E7%BD%B2Github%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&text="><i
+    <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2024/12/14/%E4%BD%BF%E7%94%A8Github%E3%80%81Hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&text=使用Github、Hexo部署个人博客"><i
                     class="fab fa-twitter " aria-hidden="true"></i></a></li>
-    <li><a class="icon" href="mailto:?subject=&body=Check out this article: http://example.com/2024/12/14/%E9%83%A8%E7%BD%B2Github%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"><i
+    <li><a class="icon" href="mailto:?subject=使用Github、Hexo部署个人博客&body=Check out this article: http://example.com/2024/12/14/%E4%BD%BF%E7%94%A8Github%E3%80%81Hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"><i
                     class="fas fa-envelope " aria-hidden="true"></i></a></li>
 </ul>
     </div>
@@ -111,7 +111,7 @@
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
-        
+        使用Github、Hexo部署个人博客
     </h1>
 
       <div class="meta">
@@ -125,11 +125,11 @@
         
     <div class="postdate">
         
-            <time datetime="2024-12-14T05:20:32.128Z"
+            <time datetime="2024-12-14T06:06:02.000Z"
                   itemprop="datePublished">2024-12-14</time>
             
                 (Updated:
-                <time datetime="2024-12-14T06:00:33.166Z"
+                <time datetime="2024-12-14T06:19:25.087Z"
                       itemprop="dateModified">2024-12-14</time>)
             
         
@@ -141,8 +141,7 @@
   </header>
   
     <div class="content" itemprop="articleBody">
-      <p>使用Github、Hexo部署个人博客</p>
-<p>一、博客文件准备</p>
+      <p>一、博客文件准备</p>
 <p>下载note.js</p>
 <p>下载hexo</p>
 <p>下载git</p>
@@ -183,6 +182,19 @@
 <p>成功push到仓库main分支</p>
 <p>6.将main分支的改动同步到网页分支，在仓库网页中选中Pull requests，新建一个pull，base选网页分支，compare选main，然后提交同步，一直点确定，成功同步</p>
 <p>7.对个人博客hexo文件夹修改后，重新generate并重复同步过程，可以把hexo下的public文件夹删除，将刚刚用于同步的文件夹重命名为public，移动到hexo文件夹内，这样每次generate后直接cd进入public然后push就可以了</p>
+<p>四、部署search功能</p>
+<p>安装hexo-generator-search插件，可见<a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search">https://github.com/wzpan/hexo-generator-search</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure>
+
+<p>在Hexo的_config.yml中，添加：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">content:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">template:</span> <span class="string">./search.xml</span></span><br></pre></td></tr></table></figure>
+
+<p>content为是否能检索文章内容，false只能检索标题</p>
+<p>设置完毕后重新generate</p>
+<p>五、添加新文章</p>
+<p>使用以下代码创建新文章</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;文章标题&quot;</span><br></pre></td></tr></table></figure>
+
 
     </div>
 </article>
@@ -266,14 +278,14 @@
         <div id="share-footer" style="display: none">
             <ul>
     <li><a class="icon"
-           target="_blank" rel="noopener" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/12/14/%E9%83%A8%E7%BD%B2Github%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&title="><i
+           target="_blank" rel="noopener" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/12/14/%E4%BD%BF%E7%94%A8Github%E3%80%81Hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&title=使用Github、Hexo部署个人博客"><i
                     class="fab fa-qq fa-lg" aria-hidden="true"></i></a></li>
     <li><a class="icon"
-           target="_blank" rel="noopener" href="https://service.weibo.com/share/share.php?url=http://example.com/2024/12/14/%E9%83%A8%E7%BD%B2Github%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&title="><i
+           target="_blank" rel="noopener" href="https://service.weibo.com/share/share.php?url=http://example.com/2024/12/14/%E4%BD%BF%E7%94%A8Github%E3%80%81Hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&title=使用Github、Hexo部署个人博客"><i
                     class="fab fa-weibo fa-lg" aria-hidden="true"></i></a></li>
-    <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2024/12/14/%E9%83%A8%E7%BD%B2Github%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&text="><i
+    <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2024/12/14/%E4%BD%BF%E7%94%A8Github%E3%80%81Hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&text=使用Github、Hexo部署个人博客"><i
                     class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-    <li><a class="icon" href="mailto:?subject=&body=Check out this article: http://example.com/2024/12/14/%E9%83%A8%E7%BD%B2Github%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"><i
+    <li><a class="icon" href="mailto:?subject=使用Github、Hexo部署个人博客&body=Check out this article: http://example.com/2024/12/14/%E4%BD%BF%E7%94%A8Github%E3%80%81Hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"><i
                     class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
 </ul>
         </div>
