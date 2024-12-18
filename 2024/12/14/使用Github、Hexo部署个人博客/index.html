@@ -129,7 +129,7 @@ push太麻烦</span></a></li><li class="toc-item toc-level-2"><a class="toc-link
                   itemprop="datePublished">2024-12-14</time>
             
                 (Updated:
-                <time datetime="2024-12-18T07:40:28.161Z"
+                <time datetime="2024-12-18T07:42:45.260Z"
                       itemprop="dateModified">2024-12-18</time>)
             
         
@@ -199,6 +199,8 @@ push太麻烦</h2>
 <p>上传</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <h2 id="使网页支持latex公式">使网页支持latex公式</h2>
+<p>hexo自带渲染器不支持latex</p>
+<p>更换渲染器</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked</span><br><span class="line">npm install hexo-renderer-pandoc</span><br><span class="line">npm install hexo-filter-mathjax</span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
 <p>如果pandoc报错重启一下</p>
 
