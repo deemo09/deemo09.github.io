@@ -608,7 +608,7 @@ body h4 {
   }
 }
 .max-width {
-  max-width: 48rem;
+  max-width: 63rem;
 }
 @media (max-width: 480px) {
   .px3 {
