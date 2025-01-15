@@ -1,41 +1,57 @@
 <!DOCTYPE html>
-<html lang=zh>
+<html lang="zh-CN">
 <head>
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    
-    
-        
-            
-                <link rel="shortcut icon" href="/images/favicon.ico">
-            
-        
-        
-            
-                <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-            
-        
-        
-            
-                <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-            
-        
-    
-    <!-- title -->
-    <title>001 使用Github、Hexo部署个人博客</title>
-    <!-- styles -->
-    
-<link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
 
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet">
-    <link href="https://cdn.staticfile.org/firacode/6.2.0/fira_code.min.css" rel="stylesheet">
-    <!-- rss -->
-    
-    
-<meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.21.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="一、博客文件准备 下载note.js 下载hexo 下载git 以下代码均在git bash中运行 1.新建文件夹hexo并进入，初始化博客，下载主题，该主题详细说明可参照https:&#x2F;&#x2F;xuthus5.github.io&#x2F;hexo-theme-cactus&#x2F;hexo&#x2F;cactus-chinese-support&#x2F; 1234hexo initgit clone https:&#x2F;&#x2F;gith">
+<meta property="og:type" content="article">
+<meta property="og:title" content="001 使用Github、Hexo部署个人博客">
+<meta property="og:url" content="http://example.com/2024/12/14/001%20%E4%BD%BF%E7%94%A8Github%E3%80%81Hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:site_name" content="deemo09">
+<meta property="og:description" content="一、博客文件准备 下载note.js 下载hexo 下载git 以下代码均在git bash中运行 1.新建文件夹hexo并进入，初始化博客，下载主题，该主题详细说明可参照https:&#x2F;&#x2F;xuthus5.github.io&#x2F;hexo-theme-cactus&#x2F;hexo&#x2F;cactus-chinese-support&#x2F; 1234hexo initgit clone https:&#x2F;&#x2F;gith">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-12-14T06:06:02.000Z">
+<meta property="article:modified_time" content="2024-12-24T07:43:19.726Z">
+<meta property="article:author" content="deemo09">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2024/12/14/001%20%E4%BD%BF%E7%94%A8Github%E3%80%81Hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2024/12/14/001%20%E4%BD%BF%E7%94%A8Github%E3%80%81Hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/","path":"2024/12/14/001 使用Github、Hexo部署个人博客/","title":"001 使用Github、Hexo部署个人博客"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>001 使用Github、Hexo部署个人博客 | deemo09</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<style>mjx-container[jax="SVG"] {
   direction: ltr;
 }
 
@@ -149,110 +165,146 @@ mjx-container[display="true"] + br {
 }
 </style></head>
 
-<body class="max-width mx-auto px3 ltr">
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
-    <div id="header-post">
-    <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
-    <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
-    <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i
-                class="fas fa-chevron-up fa-lg"></i></a>
-    <span id="menu">
-    <span id="nav">
-      <ul>
-          
-              <li><a href="/">首页</a></li>
-          
-              <li><a href="/archives/">归档</a></li>
-          
-              <li><a href="/search/">搜索</a></li>
-          
-      </ul>
-    </span>
-    <br/>
-    <span id="actions">
-      <ul>
-          
-              <li><a class="icon" href="/2024/12/17/002%20DeepMD-kit%E7%AE%80%E5%8D%95%E6%BC%94%E7%A4%BA%E2%80%94%E2%80%94%E6%B0%B4%E5%88%86%E5%AD%90%E6%A8%A1%E6%8B%9F/"><i class="fas fa-chevron-left"
-                                                                           aria-hidden="true"
-                                                                           onmouseover="$('#i-prev').toggle();"
-                                                                           onmouseout="$('#i-prev').toggle();"></i></a></li>
-          
-          
-              <li><a class="icon" href="/2024/12/13/hello-world/"><i class="fas fa-chevron-right"
-                                                                           aria-hidden="true"
-                                                                           onmouseover="$('#i-next').toggle();"
-                                                                           onmouseout="$('#i-next').toggle();"></i></a></li>
-          
-          <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i
-                          class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();"
-                          onmouseout="$('#i-top').toggle();"></i></a></li>
-        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true"
-                                        onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();"
-                                        onclick="$('#share').toggle();return false;"></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none;">上一篇</span>
-      <span id="i-next" class="info" style="display:none;">下一篇</span>
-      <span id="i-top" class="info" style="display:none;">返回顶部</span>
-      <span id="i-share" class="info" style="display:none;">分享文章</span>
-    </span>
-    <br/>
-    <div id="share" style="display: none">
-      <ul>
-    <li><a class="icon"
-           target="_blank" rel="noopener" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/12/14/001%20%E4%BD%BF%E7%94%A8Github%E3%80%81Hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&title=001 使用Github、Hexo部署个人博客"><i
-                    class="fab fa-qq " aria-hidden="true"></i></a></li>
-    <li><a class="icon"
-           target="_blank" rel="noopener" href="https://service.weibo.com/share/share.php?url=http://example.com/2024/12/14/001%20%E4%BD%BF%E7%94%A8Github%E3%80%81Hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&title=001 使用Github、Hexo部署个人博客"><i
-                    class="fab fa-weibo " aria-hidden="true"></i></a></li>
-    <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2024/12/14/001%20%E4%BD%BF%E7%94%A8Github%E3%80%81Hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&text=001 使用Github、Hexo部署个人博客"><i
-                    class="fab fa-twitter " aria-hidden="true"></i></a></li>
-    <li><a class="icon" href="mailto:?subject=001 使用Github、Hexo部署个人博客&body=Check out this article: http://example.com/2024/12/14/001%20%E4%BD%BF%E7%94%A8Github%E3%80%81Hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"><i
-                    class="fas fa-envelope " aria-hidden="true"></i></a></li>
-</ul>
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
     </div>
-    <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E5%8D%9A%E5%AE%A2%E6%96%87%E4%BB%B6%E5%87%86%E5%A4%87"><span class="toc-number">1.</span> <span class="toc-text">一、博客文件准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E6%96%B0%E5%BB%BAgithub%E4%BB%93%E5%BA%93"><span class="toc-number">2.</span> <span class="toc-text">二、新建github仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E5%B0%86%E6%9C%AC%E5%9C%B0%E5%86%85%E5%AE%B9%E4%B8%8A%E4%BC%A0github%E4%BB%93%E5%BA%93"><span class="toc-number">3.</span> <span class="toc-text">三、将本地内容上传Github仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E9%83%A8%E7%BD%B2search%E5%8A%9F%E8%83%BD"><span class="toc-number">4.</span> <span class="toc-text">四、部署search功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E6%B7%BB%E5%8A%A0%E6%96%B0%E6%96%87%E7%AB%A0"><span class="toc-number">5.</span> <span class="toc-text">五、添加新文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E4%BD%BF%E7%94%A8deploy%E4%B8%8A%E4%BC%A0"><span class="toc-number">6.</span> <span class="toc-text">六、使用deploy上传</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%87%E4%BB%BD%E5%8D%9A%E5%AE%A2%E4%B8%BB%E7%9B%AE%E5%BD%95"><span class="toc-number">7.</span> <span class="toc-text">备份博客主目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%99%E7%BD%91%E9%A1%B5%E5%A2%9E%E5%8A%A0%E6%9B%B4%E5%A4%9A%E5%8A%9F%E8%83%BD"><span class="toc-number">8.</span> <span class="toc-text">给网页增加更多功能</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%BD%91%E9%A1%B5%E6%94%AF%E6%8C%81latex%E5%85%AC%E5%BC%8F"><span class="toc-number">8.1.</span> <span class="toc-text">使网页支持latex公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E9%A1%B5%E9%9D%A2%E6%98%BE%E7%A4%BA%E5%AE%BD%E5%BA%A6"><span class="toc-number">8.2.</span> <span class="toc-text">修改页面显示宽度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E9%9A%90%E8%97%8F%E5%A4%87%E6%B3%A8%E7%9B%92%E5%AD%90"><span class="toc-number">8.3.</span> <span class="toc-text">添加隐藏备注盒子</span></a></li></ol></li></ol>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">deemo09</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
     </div>
-  </span>
+  </div>
 </div>
 
-<div class="content index py4">
-    
-    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
-    
-    <h1 class="posttitle" itemprop="name headline">
-        001 使用Github、Hexo部署个人博客
-    </h1>
 
-      <div class="meta">
-        <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <span itemprop="name">
-            
-                  deemo09
-                    
-          </span>
-        </span>
+
+
+
+
+
+</header>
         
-    <div class="postdate">
-        
-            <time datetime="2024-12-14T06:06:02.000Z"
-                  itemprop="datePublished">2024-12-14</time>
-            
-                (Updated:
-                <time datetime="2024-12-24T07:43:19.726Z"
-                      itemprop="dateModified">2024-12-24</time>)
-            
-        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E5%8D%9A%E5%AE%A2%E6%96%87%E4%BB%B6%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">一、博客文件准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E6%96%B0%E5%BB%BAgithub%E4%BB%93%E5%BA%93"><span class="nav-number">2.</span> <span class="nav-text">二、新建github仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E5%B0%86%E6%9C%AC%E5%9C%B0%E5%86%85%E5%AE%B9%E4%B8%8A%E4%BC%A0github%E4%BB%93%E5%BA%93"><span class="nav-number">3.</span> <span class="nav-text">三、将本地内容上传Github仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E9%83%A8%E7%BD%B2search%E5%8A%9F%E8%83%BD"><span class="nav-number">4.</span> <span class="nav-text">四、部署search功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E6%B7%BB%E5%8A%A0%E6%96%B0%E6%96%87%E7%AB%A0"><span class="nav-number">5.</span> <span class="nav-text">五、添加新文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E4%BD%BF%E7%94%A8deploy%E4%B8%8A%E4%BC%A0"><span class="nav-number">6.</span> <span class="nav-text">六、使用deploy上传</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%87%E4%BB%BD%E5%8D%9A%E5%AE%A2%E4%B8%BB%E7%9B%AE%E5%BD%95"><span class="nav-number">7.</span> <span class="nav-text">备份博客主目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%99%E7%BD%91%E9%A1%B5%E5%A2%9E%E5%8A%A0%E6%9B%B4%E5%A4%9A%E5%8A%9F%E8%83%BD"><span class="nav-number">8.</span> <span class="nav-text">给网页增加更多功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%BD%91%E9%A1%B5%E6%94%AF%E6%8C%81latex%E5%85%AC%E5%BC%8F"><span class="nav-number">8.1.</span> <span class="nav-text">使网页支持latex公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E9%A1%B5%E9%9D%A2%E6%98%BE%E7%A4%BA%E5%AE%BD%E5%BA%A6"><span class="nav-number">8.2.</span> <span class="nav-text">修改页面显示宽度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E9%9A%90%E8%97%8F%E5%A4%87%E6%B3%A8%E7%9B%92%E5%AD%90"><span class="nav-number">8.3.</span> <span class="nav-text">添加隐藏备注盒子</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">deemo09</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
     </div>
 
-          
-            
-      </div>
-  </header>
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
   
-    <div class="content" itemprop="articleBody">
-      <h2 id="一博客文件准备">一、博客文件准备</h2>
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/14/001%20%E4%BD%BF%E7%94%A8Github%E3%80%81Hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="deemo09">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="deemo09">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="001 使用Github、Hexo部署个人博客 | deemo09">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          001 使用Github、Hexo部署个人博客
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-12-14 14:06:02" itemprop="dateCreated datePublished" datetime="2024-12-14T14:06:02+08:00">2024-12-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-12-24 15:43:19" itemprop="dateModified" datetime="2024-12-24T15:43:19+08:00">2024-12-24</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="一博客文件准备">一、博客文件准备</h2>
 <p>下载note.js</p>
 <p>下载hexo</p>
 <p>下载git</p>
@@ -355,182 +407,95 @@ requests，新建一个pull，base选网页分支，compare选main，然后提�
 </p>
 
     </div>
-</article>
 
-
-
-  <script>
-    //检测推送
-    var pushType = "";
-    var pushLink = "";
-    var siteName = "deemo09";
-
-    var ValineButton = document.getElementsByClassName("vsubmit vbtn")[0];
-    //分情况推送
-    if (pushType === "cp") {
-      var title = siteName + "上又有新评论啦~!\n";
-      function send_valine_CoolPush() {
-        //获取元素信息
-        var pagename = document.title;
-        var wz = pagename.indexOf("|");
-        var res = pagename.substring(0, wz);
-        var pageurl = document.URL;
-        var ptime = new Date();
-        var vnick = document.getElementsByClassName("vnick vinput")[0].value;
-        var vmail = document.getElementsByClassName("vmail vinput")[0].value;
-        var vlink = document.getElementsByClassName("vlink vinput")[0].value;
-        var veditor = document.getElementsByClassName("veditor vinput")[0].value;
-        var data =
-          "昵称: " +
-          vnick +
-          "\n\n邮箱: " +
-          vmail +
-          "\n\n网站地址: " +
-          vlink +
-          "\n\n当前页面: " +
-          pagename +
-          "\n\n评论内容: " +
-          veditor +
-          "\n\n跳转链接: " +
-          pageurl +
-          "\n\n评论时间: " +
-          ptime.toLocaleString();
-        var httpRequest = new XMLHttpRequest(); //第一步：创建需要的对象
-        httpRequest.open("POST", pushLink, true); //第二步：打开连接
-        httpRequest.setRequestHeader(
-          "Content-type",
-          "application/json"
-        ); //设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
-        var payload = { "t": title, "c": data }
-        httpRequest.send(JSON.stringify(payload)); //发送请求 将情头体写在send中
-      }
-      ValineButton.onclick = send_valine_CoolPush;
-    }
-  </script>
     
-        <div id="footer-post-container">
-    <div id="footer-post">
+    
+    
 
-        <div id="nav-footer" style="display: none">
-            <ul>
-                
-                    <li><a href="/">首页</a></li>
-                
-                    <li><a href="/archives/">归档</a></li>
-                
-                    <li><a href="/search/">搜索</a></li>
-                
-            </ul>
-        </div>
+    <footer class="post-footer">
 
-        <div id="toc-footer" style="display: none">
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E5%8D%9A%E5%AE%A2%E6%96%87%E4%BB%B6%E5%87%86%E5%A4%87"><span class="toc-number">1.</span> <span class="toc-text">一、博客文件准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E6%96%B0%E5%BB%BAgithub%E4%BB%93%E5%BA%93"><span class="toc-number">2.</span> <span class="toc-text">二、新建github仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E5%B0%86%E6%9C%AC%E5%9C%B0%E5%86%85%E5%AE%B9%E4%B8%8A%E4%BC%A0github%E4%BB%93%E5%BA%93"><span class="toc-number">3.</span> <span class="toc-text">三、将本地内容上传Github仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E9%83%A8%E7%BD%B2search%E5%8A%9F%E8%83%BD"><span class="toc-number">4.</span> <span class="toc-text">四、部署search功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E6%B7%BB%E5%8A%A0%E6%96%B0%E6%96%87%E7%AB%A0"><span class="toc-number">5.</span> <span class="toc-text">五、添加新文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E4%BD%BF%E7%94%A8deploy%E4%B8%8A%E4%BC%A0"><span class="toc-number">6.</span> <span class="toc-text">六、使用deploy上传</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%87%E4%BB%BD%E5%8D%9A%E5%AE%A2%E4%B8%BB%E7%9B%AE%E5%BD%95"><span class="toc-number">7.</span> <span class="toc-text">备份博客主目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%99%E7%BD%91%E9%A1%B5%E5%A2%9E%E5%8A%A0%E6%9B%B4%E5%A4%9A%E5%8A%9F%E8%83%BD"><span class="toc-number">8.</span> <span class="toc-text">给网页增加更多功能</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%BD%91%E9%A1%B5%E6%94%AF%E6%8C%81latex%E5%85%AC%E5%BC%8F"><span class="toc-number">8.1.</span> <span class="toc-text">使网页支持latex公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E9%A1%B5%E9%9D%A2%E6%98%BE%E7%A4%BA%E5%AE%BD%E5%BA%A6"><span class="toc-number">8.2.</span> <span class="toc-text">修改页面显示宽度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E9%9A%90%E8%97%8F%E5%A4%87%E6%B3%A8%E7%9B%92%E5%AD%90"><span class="toc-number">8.3.</span> <span class="toc-text">添加隐藏备注盒子</span></a></li></ol></li></ol>
-        </div>
+        
 
-        <div id="share-footer" style="display: none">
-            <ul>
-    <li><a class="icon"
-           target="_blank" rel="noopener" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/12/14/001%20%E4%BD%BF%E7%94%A8Github%E3%80%81Hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&title=001 使用Github、Hexo部署个人博客"><i
-                    class="fab fa-qq fa-lg" aria-hidden="true"></i></a></li>
-    <li><a class="icon"
-           target="_blank" rel="noopener" href="https://service.weibo.com/share/share.php?url=http://example.com/2024/12/14/001%20%E4%BD%BF%E7%94%A8Github%E3%80%81Hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&title=001 使用Github、Hexo部署个人博客"><i
-                    class="fab fa-weibo fa-lg" aria-hidden="true"></i></a></li>
-    <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2024/12/14/001%20%E4%BD%BF%E7%94%A8Github%E3%80%81Hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&text=001 使用Github、Hexo部署个人博客"><i
-                    class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-    <li><a class="icon" href="mailto:?subject=001 使用Github、Hexo部署个人博客&body=Check out this article: http://example.com/2024/12/14/001%20%E4%BD%BF%E7%94%A8Github%E3%80%81Hexo%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"><i
-                    class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-</ul>
-        </div>
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/12/13/hello-world/" rel="prev" title="Hello World">
+                  <i class="fa fa-angle-left"></i> Hello World
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/12/17/002%20DeepMD-kit%E7%AE%80%E5%8D%95%E6%BC%94%E7%A4%BA%E2%80%94%E2%80%94%E6%B0%B4%E5%88%86%E5%AD%90%E6%A8%A1%E6%8B%9F/" rel="next" title="002 DeepMD-kit简单演示——水分子模拟">
+                  002 DeepMD-kit简单演示——水分子模拟 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
 
-        <div id="actions-footer">
-            <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i
-                        class="fas fa-bars fa-lg"
-                        aria-hidden="true"></i> 菜单</a>
-            <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i
-                        class="fas fa-list fa-lg"
-                        aria-hidden="true"></i> 目录</a>
-            <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i
-                        class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
-            <a id="top" style="display:none" class="icon" href="#"
-               onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg"
-                                                                               aria-hidden="true"></i> 返回顶部
-            </a>
-        </div>
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">deemo09</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
 
     </div>
-</div>
-    
-    <footer id="footer">
-  <div class="footer-top">
-    &copy; 2024 <i class="fas fa-heart"></i>
-    deemo09 
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
   </div>
 
-  <div class="footer-bottom">
-    
-    <!-- tongji -->
-    <script
-      async
-      src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
-    ></script>
-    <span class="site-uv">
-      <i class="fa fa-user"></i> 访问人数
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-    </span>
-    <span class="site-pv">
-      <i class="fa fa-eye"></i> 访问总量
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-    </span>
-    <br />
-     
-  </div>
-</footer>
-
-</div>
-<!-- styles -->
-
-<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.0.0/css/all.min.css">
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
 
-<link rel="stylesheet" href="https://cdn.staticfile.org/justifiedGallery/3.7.0/css/justifiedGallery.min.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
 
-<!-- jquery -->
-
-<script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
-
-
-<script src="https://cdn.staticfile.org/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js"></script>
-
-<!-- clipboard -->
-
-    
-<script src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js"></script>
-
-    <script type="text/javascript">
-        $(function () {
-            // copy-btn HTML
-            var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
-            btn += '<i class="far fa-clone"></i>';
-            btn += '</span>';
-            // mount it!
-            $(".highlight .code pre").before(btn);
-            var clip = new ClipboardJS('.btn-copy', {
-                target: function (trigger) {
-                    return trigger.nextElementSibling;
-                }
-            });
-            clip.on('success', function (e) {
-                e.trigger.setAttribute('aria-label', "复制成功!");
-                e.clearSelection();
-            })
-        })
-    </script>
+  
 
 
-<script src="/js/main.js"></script>
 
-<!-- search -->
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
 
 </body>
-
 </html>
