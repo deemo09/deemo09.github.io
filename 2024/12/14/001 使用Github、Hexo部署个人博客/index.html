@@ -27,7 +27,7 @@
 <meta property="og:description" content="一、博客文件准备 下载note.js 下载hexo 下载git 以下代码均在git bash中运行 1.新建文件夹hexo并进入，初始化博客，下载主题，该主题详细说明可参照https:&#x2F;&#x2F;xuthus5.github.io&#x2F;hexo-theme-cactus&#x2F;hexo&#x2F;cactus-chinese-support&#x2F; 1234hexo initgit clone https:&#x2F;&#x2F;gith">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-12-14T06:06:02.000Z">
-<meta property="article:modified_time" content="2024-12-24T07:43:19.726Z">
+<meta property="article:modified_time" content="2025-01-19T12:43:28.197Z">
 <meta property="article:author" content="deemo09">
 <meta name="twitter:card" content="summary">
 
@@ -173,6 +173,9 @@ mjx-container[display="true"] + br {
       <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -193,6 +196,10 @@ mjx-container[display="true"] + br {
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
 
 
 
@@ -215,7 +222,7 @@ mjx-container[display="true"] + br {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E5%8D%9A%E5%AE%A2%E6%96%87%E4%BB%B6%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">一、博客文件准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E6%96%B0%E5%BB%BAgithub%E4%BB%93%E5%BA%93"><span class="nav-number">2.</span> <span class="nav-text">二、新建github仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E5%B0%86%E6%9C%AC%E5%9C%B0%E5%86%85%E5%AE%B9%E4%B8%8A%E4%BC%A0github%E4%BB%93%E5%BA%93"><span class="nav-number">3.</span> <span class="nav-text">三、将本地内容上传Github仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E9%83%A8%E7%BD%B2search%E5%8A%9F%E8%83%BD"><span class="nav-number">4.</span> <span class="nav-text">四、部署search功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E6%B7%BB%E5%8A%A0%E6%96%B0%E6%96%87%E7%AB%A0"><span class="nav-number">5.</span> <span class="nav-text">五、添加新文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E4%BD%BF%E7%94%A8deploy%E4%B8%8A%E4%BC%A0"><span class="nav-number">6.</span> <span class="nav-text">六、使用deploy上传</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%87%E4%BB%BD%E5%8D%9A%E5%AE%A2%E4%B8%BB%E7%9B%AE%E5%BD%95"><span class="nav-number">7.</span> <span class="nav-text">备份博客主目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%99%E7%BD%91%E9%A1%B5%E5%A2%9E%E5%8A%A0%E6%9B%B4%E5%A4%9A%E5%8A%9F%E8%83%BD"><span class="nav-number">8.</span> <span class="nav-text">给网页增加更多功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%BD%91%E9%A1%B5%E6%94%AF%E6%8C%81latex%E5%85%AC%E5%BC%8F"><span class="nav-number">8.1.</span> <span class="nav-text">使网页支持latex公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E9%A1%B5%E9%9D%A2%E6%98%BE%E7%A4%BA%E5%AE%BD%E5%BA%A6"><span class="nav-number">8.2.</span> <span class="nav-text">修改页面显示宽度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E9%9A%90%E8%97%8F%E5%A4%87%E6%B3%A8%E7%9B%92%E5%AD%90"><span class="nav-number">8.3.</span> <span class="nav-text">添加隐藏备注盒子</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E5%8D%9A%E5%AE%A2%E6%96%87%E4%BB%B6%E5%87%86%E5%A4%87"><span class="nav-text">一、博客文件准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E6%96%B0%E5%BB%BAgithub%E4%BB%93%E5%BA%93"><span class="nav-text">二、新建github仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E5%B0%86%E6%9C%AC%E5%9C%B0%E5%86%85%E5%AE%B9%E4%B8%8A%E4%BC%A0github%E4%BB%93%E5%BA%93"><span class="nav-text">三、将本地内容上传Github仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E9%83%A8%E7%BD%B2search%E5%8A%9F%E8%83%BD"><span class="nav-text">四、部署search功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E6%B7%BB%E5%8A%A0%E6%96%B0%E6%96%87%E7%AB%A0"><span class="nav-text">五、添加新文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E4%BD%BF%E7%94%A8deploy%E4%B8%8A%E4%BC%A0"><span class="nav-text">六、使用deploy上传</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%87%E4%BB%BD%E5%8D%9A%E5%AE%A2%E4%B8%BB%E7%9B%AE%E5%BD%95"><span class="nav-text">备份博客主目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%99%E7%BD%91%E9%A1%B5%E5%A2%9E%E5%8A%A0%E6%9B%B4%E5%A4%9A%E5%8A%9F%E8%83%BD"><span class="nav-text">给网页增加更多功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%BD%91%E9%A1%B5%E6%94%AF%E6%8C%81latex%E5%85%AC%E5%BC%8F"><span class="nav-text">使网页支持latex公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E9%A1%B5%E9%9D%A2%E6%98%BE%E7%A4%BA%E5%AE%BD%E5%BA%A6"><span class="nav-text">修改页面显示宽度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E9%9A%90%E8%97%8F%E5%A4%87%E6%B3%A8%E7%9B%92%E5%AD%90"><span class="nav-text">添加隐藏备注盒子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8next%E4%B8%BB%E9%A2%98"><span class="nav-text">使用NEXT主题</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -292,7 +299,7 @@ mjx-container[display="true"] + br {
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-12-24 15:43:19" itemprop="dateModified" datetime="2024-12-24T15:43:19+08:00">2024-12-24</time>
+      <time title="修改时间：2025-01-19 20:43:28" itemprop="dateModified" datetime="2025-01-19T20:43:28+08:00">2025-01-19</time>
     </span>
 
   
@@ -315,6 +322,7 @@ mjx-container[display="true"] + br {
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 <p>3.生成public文件夹，用于上传至Github产生静态网页</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
 <h2 id="二新建github仓库">二、新建github仓库</h2>
 <p>1.新建github仓库，名称为username.github.io，勾选产生readme</p>
 <p>2.新建一个分支，用于产生网页，主分支main用于同步和修改</p>
@@ -405,6 +413,11 @@ requests，新建一个pull，base选网页分支，compare选main，然后提�
 这是一段带有备注的文字，其中 <span class="tooltip">深度学习 <span class="tooltiptext">深度学习是机器学习的一个分支，关注于多层神经网络</span>
 </span> 是重点研究内容。
 </p>
+<h3 id="使用next主题">使用NEXT主题</h3>
+<p>查看https://choubin.site/2019/12/30/CustomBlogTheme/</p>
+<p>以及https://hexo-next.readthedocs.io/zh-cn/latest/next</p>
+<p>next目录取消自动收回，sidebar.js的sidebar:hide所在行进行注释</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo\.deploy_git\js\sidebar.js</span><br><span class="line"></span><br><span class="line"># window.addEventListener('sidebar:hide', this.hideSidebar);</span><br></pre></td></tr></table></figure>
 
     </div>
 
