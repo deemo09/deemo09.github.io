@@ -257,7 +257,7 @@ mjx-container[display="true"] + br {
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/01/21/004-%E6%8C%87%E7%BA%B9%E5%87%BD%E6%95%B0/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/01/21/004%20%E7%BB%93%E6%9E%84%E6%8F%8F%E8%BF%B0%E7%AC%A6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -275,7 +275,7 @@ mjx-container[display="true"] + br {
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/01/21/004-%E6%8C%87%E7%BA%B9%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">004 指纹函数</a>
+          <a href="/2025/01/21/004%20%E7%BB%93%E6%9E%84%E6%8F%8F%E8%BF%B0%E7%AC%A6/" class="post-title-link" itemprop="url">004 结构描述符</a>
         </h2>
 
         <div class="post-meta-container">
@@ -293,7 +293,7 @@ mjx-container[display="true"] + br {
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-02-21 21:00:24" itemprop="dateModified" datetime="2025-02-21T21:00:24+08:00">2025-02-21</time>
+      <time title="修改时间：2025-03-02 10:22:54" itemprop="dateModified" datetime="2025-03-02T10:22:54+08:00">2025-03-02</time>
     </span>
 
   
@@ -306,11 +306,20 @@ mjx-container[display="true"] + br {
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="指纹函数">指纹函数</h1>
-<p>指纹函数是一种能够唯一表征结构的函数，需要满足几个条件：源自结构本身而非其性质（如能量）、对坐标系的平移、旋转和反射不变、能够区分原子的不同排列方式（例如合金中的不同有序结构）、与实验（如衍射图样）或微观能量学相关、对数值误差具有鲁棒性。此外，相似结构的指纹应相似，指纹函数的差异应能合理衡量结构的相似性。</p>
+          <h1 id="描述符">描述符</h1>
+<p>将结构信息提取为特定的描述符，用于结构分析、机器学习等。
+构建用于机器学习的描述符一般需满足以下要求(<a target="_blank" rel="noopener" href="https://doi.org/10.1088/2632-2153/aca005">MBTR论文</a>)：</p>
+<ul>
+<li>对旋转、平移、排列（置换）具有不变性</li>
+<li>唯一性，描述符与输出值一一对应（函数）</li>
+<li>连续的，在理想状态下是可微的</li>
+<li>通用性，可编码不同体系，包括非周期性与周期性体系</li>
+<li>计算速度快</li>
+<li>数据高效性，在更少的数据集提取更多的数据信息，避免依赖大量的DFT数据集</li>
+</ul>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2025/01/21/004-%E6%8C%87%E7%BA%B9%E5%87%BD%E6%95%B0/#more" rel="contents">
+              <a class="btn" href="/2025/01/21/004%20%E7%BB%93%E6%9E%84%E6%8F%8F%E8%BF%B0%E7%AC%A6/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
