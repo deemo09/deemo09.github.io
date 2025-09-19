@@ -230,7 +230,7 @@ mjx-container[display="true"] + br {
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -248,6 +248,106 @@ mjx-container[display="true"] + br {
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/04/10/005%20CentOS7%E5%8D%87%E7%BA%A7Glibc2-28%E5%B9%B6%E8%BF%9E%E6%8E%A5Python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="deemo09">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="deemo09">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | deemo09">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/04/10/005%20CentOS7%E5%8D%87%E7%BA%A7Glibc2-28%E5%B9%B6%E8%BF%9E%E6%8E%A5Python/" class="post-title-link" itemprop="url">005 CentOS7升级Glibc2.28并连接Python</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-04-10 19:11:20" itemprop="dateCreated datePublished" datetime="2025-04-10T19:11:20+08:00">2025-04-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-09-19 11:09:20" itemprop="dateModified" datetime="2025-09-19T11:09:20+08:00">2025-09-19</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="环境准备">环境准备</h1>
+<p>参考https://blog.csdn.net/m0_37814112/article/details/131515147</p>
+<p>手动安装texinfo、mlocate、bison并export到环境</p>
+<h2 id="安装gcc">安装GCC</h2>
+<p>注意修改ftp://gcc.gnu.org/pub/gcc/infrastructure/为http://www.mirrorservice.org/sites/sourceware.org/pub/gcc/infrastructure/</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">wget https://mirrors.aliyun.com/gnu/gcc/gcc-9.3.0/gcc-9.3.0.tar.gz</span><br><span class="line">tar axf gcc-9.3.0.tar.gz</span><br><span class="line">cd gcc-9.3.0</span><br><span class="line"></span><br><span class="line">修改ftp://gcc.gnu.org/pub/gcc/infrastructure/为http://www.mirrorservice.org/sites/sourceware.org/pub/gcc/infrastructure/</span><br><span class="line"></span><br><span class="line">./contrib/download_prerequisites</span><br><span class="line">cat /proc/cpuinfo| grep &quot;processor&quot;| wc -l</span><br><span class="line">mkdir build</span><br><span class="line">cd build</span><br><span class="line">../configure --enable-checking=release --enable-language=c,c++ --disable-multilib --prefix=/usr</span><br><span class="line">make -j16</span><br><span class="line">make install</span><br><span class="line">gcc -v</span><br></pre></td></tr></table></figure>
+<h2 id="安装make">安装MAKE</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">wget https://mirrors.aliyun.com/gnu/make/make-4.3.tar.gz</span><br><span class="line">tar axf make-4.3.tar.gz</span><br><span class="line">cd make-4.3</span><br><span class="line">mkdir build</span><br><span class="line">cd build</span><br><span class="line">../configure --prefix=/usr &amp;&amp; make &amp;&amp; make install</span><br><span class="line">make -v</span><br></pre></td></tr></table></figure>
+<h2 id="安装glibc2.28">安装GLIBC2.28</h2>
+<p>注意可能识别不到MAKE，则需要手动指定</p>
+<p>../configure <strong>MAKE=/home/user/apps/make/bin/make</strong>
+--prefix=/home/user/apps/glibc --disable-profile --enable-add-ons
+--with-headers=/usr/include --with-binutils=/usr/bin
+--disable-sanity-checks --disable-werror</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">wget https://ftp.gnu.org/gnu/glibc/glibc-2.28.tar.gz</span><br><span class="line">tar axf glibc-2.28.tar.gz</span><br><span class="line">cd glibc-2.28/</span><br><span class="line">mkdir build</span><br><span class="line">cd build</span><br><span class="line">../configure --prefix=/usr --disable-profile --enable-add-ons --with-headers=/usr/include --with-binutils=/usr/bin --disable-sanity-checks --disable-werror</span><br><span class="line">make -j16</span><br><span class="line">make install</span><br><span class="line">make localedata/install-locales</span><br><span class="line">export PATH=/path/to/apps/glibc/bin:$PATH</span><br><span class="line">export CPATH=/path/to/apps/glibc/include:$CPATH</span><br><span class="line">export C_INCLUDE_PATH=/path/to/apps/glibc/include:$C_INCLUDE_PATH</span><br><span class="line">ldd --version</span><br><span class="line">ll /lib64/libc.so.6</span><br></pre></td></tr></table></figure>
+<h1 id="连接python">连接Python</h1>
+<p>安装完成后，Python仍不支持安装2.28的whl</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -c &quot;import pip._internal.utils.compatibility_tags as tags; print(&#x27;\n&#x27;.join([str(t) for t in tags.get_supported() if &#x27;manylinux&#x27; in str(t) and &#x27;cp312&#x27; in str(t)]))&quot;</span><br></pre></td></tr></table></figure>
+<p>可发现其中没有cp312-none-manylinux_2_28_x86_64</p>
+<p>安装<a
+target="_blank" rel="noopener" href="https://github.com/NixOS/patchelf/releases">Patcheif</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cp /path/to/bin/python /path/to/bin/python228</span><br><span class="line">patchelf --set-interpreter /path/to/glibc/lib/ld-linux-x86-64.so.2 /path/to/bin/python228</span><br><span class="line">patchelf --set-rpath /path/to/glibc/lib /path/to/bin/python228</span><br><span class="line">python228 -c &quot;import pip._internal.utils.compatibility_tags as tags; print(&#x27;\n&#x27;.join([str(t) for t in tags.get_supported() if &#x27;manylinux&#x27; in str(t) and &#x27;cp312&#x27; in str(t)]))&quot;</span><br></pre></td></tr></table></figure>
+<p>就能看到cp312-none-manylinux_2_28_x86_64</p>
+<p>即可通过python228安装</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python228 -m pip install</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -293,7 +393,7 @@ mjx-container[display="true"] + br {
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-03-02 10:22:54" itemprop="dateModified" datetime="2025-03-02T10:22:54+08:00">2025-03-02</time>
+      <time title="修改时间：2025-04-10 19:12:23" itemprop="dateModified" datetime="2025-04-10T19:12:23+08:00">2025-04-10</time>
     </span>
 
   
@@ -386,7 +486,7 @@ mjx-container[display="true"] + br {
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-01-19 20:23:56" itemprop="dateModified" datetime="2025-01-19T20:23:56+08:00">2025-01-19</time>
+      <time title="修改时间：2025-04-28 19:21:50" itemprop="dateModified" datetime="2025-04-28T19:21:50+08:00">2025-04-28</time>
     </span>
 
   
